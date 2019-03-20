@@ -1,0 +1,9 @@
+{% if child_list %}
+    <ul>
+    {% for child in child_list %}
+        <li><a href="details/{{ child.child_name }}">{{ child.child_name }} have : {{child.disease.name}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No children are available.</p>
+{% endif %}
